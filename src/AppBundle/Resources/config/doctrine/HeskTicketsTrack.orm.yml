@@ -1,0 +1,58 @@
+AppBundle\Entity\HeskTicketsTrack:
+    type: entity
+    table: hesk_tickets_track
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idTicket:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: id_ticket
+        idPrevCateg:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: id_prev_categ
+        idUser:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: id_user
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: '0000-00-00 00:00:00'
+        status:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        idPrevUser:
+            type: smallint
+            nullable: true
+            options:
+                unsigned: false
+            column: id_prev_user
+        idCateg:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: id_categ
+    lifecycleCallbacks: {  }

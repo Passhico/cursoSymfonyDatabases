@@ -1,0 +1,53 @@
+AppBundle\Entity\TicketsSat:
+    type: entity
+    table: tickets_sat
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        pedido:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+        cliente:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+        fecha:
+            type: datetime
+            nullable: true
+        trackid:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        admin:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+        abierto:
+            type: string
+            nullable: true
+            length: 1
+            options:
+                fixed: false
+                default: s
+        email:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

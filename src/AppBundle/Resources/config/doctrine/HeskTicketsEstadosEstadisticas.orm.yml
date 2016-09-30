@@ -1,0 +1,30 @@
+AppBundle\Entity\HeskTicketsEstadosEstadisticas:
+    type: entity
+    table: hesk_tickets_estados_estadisticas
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fecha:
+            type: date
+            nullable: false
+        hora:
+            type: time
+            nullable: false
+        estado:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        unidades:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

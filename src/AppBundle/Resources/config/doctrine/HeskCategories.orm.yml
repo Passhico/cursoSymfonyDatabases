@@ -1,0 +1,42 @@
+AppBundle\Entity\HeskCategories:
+    type: entity
+    table: hesk_categories
+    id:
+        id:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 60
+            options:
+                fixed: false
+                default: ''
+        catOrder:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+            column: cat_order
+        oculto:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: 'n'
+        activo:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: s
+    lifecycleCallbacks: {  }

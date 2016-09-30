@@ -1,0 +1,172 @@
+AppBundle\Entity\HeskTicketsArchivados20140813:
+    type: entity
+    table: hesk_tickets_archivados_20140813
+    indexes:
+        trackid:
+            columns:
+                - trackid
+        archive:
+            columns:
+                - archive
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        trackid:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+                default: ''
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: ''
+        email:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: ''
+        category:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: true
+                default: '1'
+        priority:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+                default: '3'
+        subject:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+                default: ''
+        message:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        dt:
+            type: datetime
+            nullable: false
+            options:
+                default: '0000-00-00 00:00:00'
+        lastchange:
+            type: datetime
+            nullable: false
+            options:
+                default: '0000-00-00 00:00:00'
+        ip:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: ''
+        status:
+            type: string
+            nullable: true
+            length: null
+            options:
+                fixed: false
+                default: '1'
+        lastreplier:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+                default: '0'
+        archive:
+            type: string
+            nullable: false
+            length: null
+            options:
+                fixed: false
+                default: '0'
+        attachments:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        custom1:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        custom2:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        custom3:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        custom4:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        custom5:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        modificadoPor:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+                default: ''
+            column: modificado_por
+        fecha:
+            type: string
+            nullable: false
+            length: 16
+            options:
+                fixed: false
+                default: ''
+        fechaActivo:
+            type: datetime
+            nullable: true
+            column: fecha_activo
+        usuarioActivo:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: usuario_activo
+    lifecycleCallbacks: {  }

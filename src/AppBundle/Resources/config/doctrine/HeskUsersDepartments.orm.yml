@@ -1,0 +1,21 @@
+AppBundle\Entity\HeskUsersDepartments:
+    type: entity
+    table: hesk_users_departments
+    id:
+        id:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        department:
+            type: string
+            nullable: false
+            length: 60
+            options:
+                fixed: false
+                default: '0'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,76 @@
+AppBundle\Entity\HeskUsers:
+    type: entity
+    table: hesk_users
+    id:
+        id:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        user:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: ''
+        pass:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: ''
+        isadmin:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '0'
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: ''
+        email:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        signature:
+            type: text
+            nullable: false
+            length: 16777215
+            options:
+                fixed: false
+        categories:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        idDepartment:
+            type: smallint
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: id_department
+        notify:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: true
+                default: '1'
+    lifecycleCallbacks: {  }

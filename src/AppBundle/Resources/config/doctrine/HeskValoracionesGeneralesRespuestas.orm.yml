@@ -1,0 +1,44 @@
+AppBundle\Entity\HeskValoracionesGeneralesRespuestas:
+    type: entity
+    table: hesk_valoraciones_generales_respuestas
+    uniqueConstraints:
+        unique_id_reply:
+            columns:
+                - id_reply
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idTicket:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_ticket
+        idReply:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_reply
+        valoracionGeneral:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: false
+                default: '5'
+            column: valoracion_general
+        textoValoracion:
+            type: string
+            nullable: true
+            length: 1500
+            options:
+                fixed: false
+            column: texto_valoracion
+    lifecycleCallbacks: {  }
