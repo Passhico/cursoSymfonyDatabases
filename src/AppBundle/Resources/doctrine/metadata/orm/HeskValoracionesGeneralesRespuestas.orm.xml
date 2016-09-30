@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="HeskValoracionesGeneralesRespuestas" table="hesk_valoraciones_generales_respuestas">
+    <unique-constraints>
+      <unique-constraint name="unique_id_reply" columns="id_reply"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idTicket" type="integer" column="id_ticket" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idReply" type="integer" column="id_reply" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="valoracionGeneral" type="smallint" column="valoracion_general" nullable="false">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">5</option>
+      </options>
+    </field>
+    <field name="textoValoracion" type="string" column="texto_valoracion" length="1500" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

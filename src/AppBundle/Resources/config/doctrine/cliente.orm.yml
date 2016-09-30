@@ -1,0 +1,16 @@
+AppBundle\Entity\cliente:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\clienteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        object:
+            type: string
+            length: '10'
+            unique: true
+    lifecycleCallbacks: {  }

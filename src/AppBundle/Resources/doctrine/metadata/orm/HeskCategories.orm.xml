@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="HeskCategories" table="hesk_categories">
+    <id name="id" type="smallint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="60" nullable="false">
+      <options>
+        <option name="fixed"/>
+        <option name="default"/>
+      </options>
+    </field>
+    <field name="catOrder" type="smallint" column="cat_order" nullable="false">
+      <options>
+        <option name="unsigned">1</option>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="oculto" type="string" column="oculto" length="1" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+        <option name="default">n</option>
+      </options>
+    </field>
+    <field name="activo" type="string" column="activo" length="1" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+        <option name="default">s</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
